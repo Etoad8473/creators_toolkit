@@ -31,3 +31,8 @@ body{
   padding: 5px 15px;
   background-color: rgb(170, 170, 170);
 }
+
+.dropZone{
+  border: 1px solid #fff;
+  background-color: red;
+}

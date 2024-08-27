@@ -1,3 +1,5 @@
+import { VideoConverter } from "./components/videoConverter";
+
 
 function App() {
   return (
@@ -14,14 +16,18 @@ function App() {
         <h1>Creator's Toolkit</h1>
         <p>Everything you could ever need</p>
         <div className="toolbox">
-          <div className="tool">
-            <h3>Video Converter</h3>
-          </div>
+          <VideoConverter/>
           <div className="tool">
             <h3>Screen Recorder</h3>
           </div>
           <div className="tool">
             <h3>Music Downloader</h3>
+          </div>
+          <div className="tool">
+            <h3>Phone Video Transferer</h3>
+          </div>
+          <div className="tool">
+            <h3></h3>
           </div>
         </div>
       </div>
