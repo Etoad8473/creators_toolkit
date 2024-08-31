@@ -27,6 +27,13 @@ export const VideoConverter = () => {
         if(file){
             setFileName(file.name);
         }
+
+        if(file.type === 'video/webm'){
+
+        }
+        else{
+            setErrorMsg('Only webM supported');
+        }
     }
 
     const handleDragOver = (e)=>{
