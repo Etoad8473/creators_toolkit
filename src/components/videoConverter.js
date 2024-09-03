@@ -6,6 +6,7 @@ export const VideoConverter = () => {
     const [errorMsg, setErrorMsg] = useState('');
 
 
+    //get the file from drag and drop
     const handleDrop = (e)=>{
 
         e.preventDefault();
@@ -29,13 +30,15 @@ export const VideoConverter = () => {
         }
 
         if(file.type === 'video/webm'){
-
+            setErrorMsg('');
         }
         else{
             setErrorMsg('Only webM supported');
         }
     }
 
+
+    //handles the file drag over action
     const handleDragOver = (e)=>{
         e.preventDefault();
     }

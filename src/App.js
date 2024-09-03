@@ -13,7 +13,7 @@ function App() {
         </div>
       </div>
       <div className="main">
-        <h1>Creator's Toolkit</h1>
+        <h1>CREATOR'S TOOLKIT</h1>
         <p>Everything you could ever need</p>
         <div className="toolbox">
           <VideoConverter/>

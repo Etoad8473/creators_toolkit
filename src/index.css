@@ -1,8 +1,31 @@
+:root{
+  --background: #db4345;
+  --text: #f5e2eb;
+  --primary: #ff8a92;
+  /* --secondary: #ff395e; */
+  --accent: white;
+}
+
 body{
   display: flex;
   /* align-items: center; */
   justify-content: center;
-  background-color: darkgray;
+  background-color: var(--background);
+  color: var(--text);
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1{
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--primary);
+  font-size: 10vh;
+  
 }
 
 .header{
@@ -11,13 +34,24 @@ body{
   width:100%;
   display: flex;
   justify-content: space-between;
+  cursor:cell;
+
+  div{
+    /* background-color: black; */
+    /* padding: 5px 5px; */
+    margin: 0 10px
+  }
+
+  div:hover{
+    color: var(--accent);
+  }
 }
 
 .main{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: grey;
+  background-color: var(--background);
   padding: 1rem;
 }
 
@@ -29,10 +63,26 @@ body{
 .tool{
   margin: 0 5px;
   padding: 5px 15px;
-  background-color: rgb(170, 170, 170);
+  background-color: var(--background);
+  /* border-radius: 3px; */
+  border: solid var(--primary) 4px;
+}
+
+.tool:hover{
+  color: var(--primary);
+  background-color: white;
+
+  .dropZone{
+    color: var(--primary);
+  }
 }
 
 .dropZone{
-  border: 1px solid #fff;
-  background-color: red;
+  /* border: 1px solid var(--accent); */
+  /* background-color: var(--background); */
+  color: var(--accent);
+}
+
+.dropZone :hover{
+  color: var(--text);
 }
