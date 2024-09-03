@@ -1,7 +1,7 @@
 :root{
-  --background: #db4345;
-  --text: #f5e2eb;
-  --primary: #ff8a92;
+  --background: #db4843;
+  --text: #f5e2e8;
+  --primary: #ff8a8a;
   /* --secondary: #ff395e; */
   --accent: white;
 }
@@ -16,6 +16,7 @@ body{
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  cursor:default;
 }
 
 h1{
@@ -34,7 +35,6 @@ h1{
   width:100%;
   display: flex;
   justify-content: space-between;
-  cursor:cell;
 
   div{
     /* background-color: black; */
@@ -44,6 +44,7 @@ h1{
 
   div:hover{
     color: var(--accent);
+    cursor:cell;
   }
 }
 
@@ -66,11 +67,14 @@ h1{
   background-color: var(--background);
   /* border-radius: 3px; */
   border: solid var(--primary) 4px;
+
+
 }
 
 .tool:hover{
   color: var(--primary);
   background-color: white;
+  /* cursor:cell; */
 
   .dropZone{
     color: var(--primary);
