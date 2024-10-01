@@ -24,10 +24,13 @@ function App() {
             <h3>Music Downloader</h3>
           </div>
           <div className="tool">
-            <h3>Phone Video Transferer</h3>
+            <h3>iPhone to PC transfer</h3>
           </div>
           <div className="tool">
-            <h3></h3>
+            <h3>STICKY NOTE BRAINSTORMING</h3>
+          </div>
+          <div className="tool">
+            <h3>Add LUT to videos</h3>
           </div>
         </div>
       </div>
