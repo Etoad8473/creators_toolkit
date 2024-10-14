@@ -16,21 +16,21 @@ function App() {
         <h1>CREATOR'S TOOLKIT</h1>
         <p>Everything you could ever need</p>
         <div className="toolbox">
+          <div className="tool">
+            <h3>STICKY NOTE BRAINSTORMING</h3>
+          </div>
           <VideoConverter/>
           {/* <div className="tool">
             <h3>Screen Recorder</h3>
           </div> */}
           <div className="tool">
-            <h3>STICKY NOTE BRAINSTORMING</h3>
-          </div>
-          <div className="tool">
-            <h3>iPhone to PC transfer</h3>
-          </div>
-          <div className="tool">
             <h3>Add LUT to videos</h3>
           </div>
           <div className="tool">
             <h3>Music Downloader</h3>
+          </div>
+          <div className="tool">
+            <h3>iPhone to PC transfer</h3>
           </div>
         </div>
       </div>

@@ -64,16 +64,17 @@ h1{
 
 .toolbox{
   display: flex;
-
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .tool{
-  margin: 0 5px;
   padding: 5px 15px;
   background-color: var(--background);
   /* border-radius: 3px; */
   border: solid var(--primary) 4px;
-
+  flex: 1;
+  min-width: 9rem;
 
 }
 
