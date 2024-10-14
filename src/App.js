@@ -17,20 +17,20 @@ function App() {
         <p>Everything you could ever need</p>
         <div className="toolbox">
           <VideoConverter/>
-          <div className="tool">
+          {/* <div className="tool">
             <h3>Screen Recorder</h3>
-          </div>
+          </div> */}
           <div className="tool">
-            <h3>Music Downloader</h3>
+            <h3>STICKY NOTE BRAINSTORMING</h3>
           </div>
           <div className="tool">
             <h3>iPhone to PC transfer</h3>
           </div>
           <div className="tool">
-            <h3>STICKY NOTE BRAINSTORMING</h3>
+            <h3>Add LUT to videos</h3>
           </div>
           <div className="tool">
-            <h3>Add LUT to videos</h3>
+            <h3>Music Downloader</h3>
           </div>
         </div>
       </div>

@@ -2,10 +2,22 @@ import { FFmpeg } from '@ffmpeg/ffmpeg';
 import React, { useState, useRef, useEffect } from 'react';
 import { toBlobURL, fetchFile } from '@ffmpeg/util';
 
+
+//TODO
+/*
+Download the finished video
+Show feedback that the video is converting
+Show progress updating bar (get from chalance website)
+
+Allow all file types, and choose the output type
+*/
+
+
 export const VideoConverter = () => {
 
     const [fileName, setFileName] = useState(null);
     const [errorMsg, setErrorMsg] = useState('');
+    const [progress, setProgress] = useState(0);
     // const [fileN, setFile] = useState(null);
 
 
@@ -32,14 +44,25 @@ export const VideoConverter = () => {
             setFileName(file.name);
         }
 
+        //ACCEPTED FILE TYPES ------------------------------------------------------------------TODO
         if(file.type === 'video/mp4'){
             setErrorMsg('');
-            transcode(file,'.mp4','.avi');
+            transcode(file,'.mp4','.avi').then(data=>{
+                downloadVideo(data);
+            });
         }
         else{
             setErrorMsg('Only mp4 supported');
         }
 
+    }
+
+    const downloadVideo = (data) => {
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(new Blob([data.buffer], {type:'video/avi'}));//CHANGE THIS TO UPDATE WITH DIFFERENT FILE TYPES ------TODO
+        a.download = fileName + '_converted.avi';
+
+        a.click();
     }
 
 
@@ -62,7 +85,8 @@ export const VideoConverter = () => {
         const ffmpeg = ffmpegRef.current;
 
         ffmpeg.on('progress', event => {
-            console.log(event);
+            // console.log(event.progress * 100);
+            setProgress(event.progress * 100);
         })
 
         await ffmpeg.load({
@@ -102,6 +126,7 @@ export const VideoConverter = () => {
         >
             <p>{fileName===null?"Drop File" : `File name: ${fileName}`}</p>
             <p>{errorMsg}</p>
+            <p>{progress>0 ? progress.toFixed(1) : ''}</p>
         </div>
     </div>
   )
